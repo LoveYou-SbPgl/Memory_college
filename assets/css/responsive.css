@@ -1,0 +1,235 @@
+/* ============================================
+   FROM STRANGERS TO HOME — Responsive Styles
+   Mobile-first responsive breakpoints
+   ============================================ */
+
+/* ---------- Tablet (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 100px 0;
+  }
+
+  .section-nav {
+    right: 16px;
+    gap: 12px;
+  }
+
+  .nav-dot { width: 8px; height: 8px; }
+  .nav-dot::before { display: none; }
+
+  /* Timeline */
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+    padding-left: 56px !important;
+    padding-right: 20px !important;
+  }
+
+  .timeline-item .timeline-dot {
+    left: 14px !important;
+    right: auto !important;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+  }
+}
+
+/* ---------- Mobile Large (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 80px 0;
+    --gap-lg: 48px;
+    --gap-xl: 72px;
+  }
+
+  .container { padding: 0 20px; }
+
+  /* Section Nav */
+  .section-nav {
+    right: 12px;
+    gap: 10px;
+  }
+
+  .nav-dot { width: 7px; height: 7px; }
+
+  /* Music Toggle */
+  .music-toggle {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Hero */
+  .hero-section {
+    padding: 60px 0;
+  }
+
+  .hero-content { padding: 0 20px; }
+
+  .hero-lines { gap: 10px; }
+
+  .scroll-indicator {
+    bottom: 24px;
+  }
+
+  /* Timeline */
+  .timeline-header { margin-bottom: var(--gap-lg); }
+
+  .timeline-item {
+    padding-bottom: 40px;
+  }
+
+  .timeline-card {
+    padding: 20px 22px;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .polaroid { padding: 8px 8px 16px; }
+
+  /* Letter */
+  .letter-section {
+    padding: 100px 0;
+  }
+
+  .letter-content { padding: 0 20px; }
+
+  .letter-body p {
+    line-height: 1.9;
+  }
+
+  /* One More Year */
+  .one-more-year-content { padding: 0 20px; }
+
+  .one-more-year-lines { gap: 14px; }
+
+  /* Goodbye */
+  .goodbye-content { padding: 0 20px; }
+}
+
+/* ---------- Mobile Small (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 64px 0;
+    --gap-lg: 36px;
+    --gap-xl: 56px;
+  }
+
+  .container { padding: 0 16px; }
+
+  /* Hide section nav on very small screens */
+  .section-nav { display: none; }
+
+  /* Hero */
+  .hero-year {
+    font-size: 2.8rem !important;
+    letter-spacing: 2px;
+  }
+
+  .hero-line {
+    font-size: 0.95rem !important;
+  }
+
+  .hero-name {
+    font-size: 1.8rem !important;
+  }
+
+  /* Timeline */
+  .timeline::before { left: 14px; }
+
+  .timeline-item {
+    padding-left: 44px !important;
+    padding-right: 8px !important;
+    padding-bottom: 32px;
+  }
+
+  .timeline-item .timeline-dot {
+    left: 8px !important;
+    width: 10px;
+    height: 10px;
+  }
+
+  .timeline-card {
+    padding: 16px 18px;
+  }
+
+  .timeline-title {
+    font-size: 1.05rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.85rem;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 24px;
+  }
+
+  /* Letter */
+  .letter-greeting {
+    font-size: 1.6rem !important;
+  }
+
+  .letter-body p {
+    font-size: 0.95rem !important;
+    line-height: 1.85;
+  }
+
+  /* Goodbye */
+  .goodbye-quote {
+    font-size: 1.2rem !important;
+  }
+
+  .last-thing-btn {
+    font-size: 0.78rem;
+    padding: 12px 28px;
+  }
+
+  /* Final Overlay */
+  .final-message-text {
+    font-size: 1.15rem !important;
+  }
+
+  .final-overlay-content {
+    padding: 0 16px;
+  }
+}
+
+/* ---------- Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .parallax-bg {
+    animation: none !important;
+  }
+
+  .hero-year,
+  .hero-line,
+  .hero-name,
+  .hero-subtitle,
+  .scroll-indicator {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,241 @@
+/* ============================================
+   FROM STRANGERS TO HOME — Animations
+   Soft, cinematic, slow-paced effects
+   ============================================ */
+
+/* ---------- Keyframes ---------- */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes scrollDot {
+  0% { top: 6px; opacity: 1; }
+  50% { top: 16px; opacity: 0.3; }
+  100% { top: 6px; opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+@keyframes gentleRotate {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px var(--accent-glow); }
+  50% { box-shadow: 0 0 20px var(--accent-glow); }
+}
+
+@keyframes bar1 {
+  0%, 100% { height: 4px; }
+  50% { height: 14px; }
+}
+
+@keyframes bar2 {
+  0%, 100% { height: 8px; }
+  50% { height: 4px; }
+}
+
+@keyframes bar3 {
+  0%, 100% { height: 6px; }
+  50% { height: 16px; }
+}
+
+@keyframes bar4 {
+  0%, 100% { height: 10px; }
+  50% { height: 5px; }
+}
+
+@keyframes letterReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+@keyframes softBreath {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes lineExpand {
+  from { width: 0; }
+  to { width: 60px; }
+}
+
+/* ---------- Utility Animation Classes ---------- */
+
+.anim-fade-in {
+  opacity: 0;
+  transition: opacity 1s var(--ease-smooth);
+}
+
+.anim-fade-in.visible { opacity: 1; }
+
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth);
+}
+
+.anim-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.anim-fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth);
+}
+
+.anim-fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.anim-fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth);
+}
+
+.anim-fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.anim-scale-in {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth);
+}
+
+.anim-scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---------- Stagger Delays ---------- */
+.delay-1 { transition-delay: 0.1s !important; }
+.delay-2 { transition-delay: 0.2s !important; }
+.delay-3 { transition-delay: 0.3s !important; }
+.delay-4 { transition-delay: 0.4s !important; }
+.delay-5 { transition-delay: 0.5s !important; }
+.delay-6 { transition-delay: 0.6s !important; }
+.delay-7 { transition-delay: 0.7s !important; }
+.delay-8 { transition-delay: 0.8s !important; }
+
+/* ---------- Hero Text Animations ---------- */
+.hero-section .hero-year {
+  animation: fadeIn 1.5s var(--ease-smooth) 0.5s forwards;
+}
+
+.hero-section .hero-line:nth-child(1) {
+  animation: fadeInUp 1s var(--ease-smooth) 1.5s forwards;
+}
+
+.hero-section .hero-line:nth-child(2) {
+  animation: fadeInUp 1s var(--ease-smooth) 2.5s forwards;
+}
+
+.hero-section .hero-line:nth-child(3) {
+  animation: fadeInUp 1s var(--ease-smooth) 3.5s forwards;
+}
+
+.hero-section .hero-name {
+  animation: fadeIn 1.5s var(--ease-smooth) 4.5s forwards;
+}
+
+.hero-section .hero-subtitle {
+  animation: fadeInUp 1s var(--ease-smooth) 5.5s forwards;
+}
+
+/* ---------- Section Reveal ---------- */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s var(--ease-smooth), transform 1s var(--ease-smooth);
+}
+
+.section-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Parallax Helper ---------- */
+.parallax-bg {
+  will-change: transform;
+  animation: slowZoom 30s ease-in-out infinite alternate;
+}
+
+/* ---------- Hover Micro-animations ---------- */
+.hover-lift {
+  transition: transform 0.4s var(--ease-smooth), box-shadow 0.4s var(--ease-smooth);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Text Shimmer ---------- */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    #f0e0c8 25%,
+    var(--accent) 50%,
+    #f0e0c8 75%,
+    var(--accent) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
