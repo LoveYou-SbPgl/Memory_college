@@ -111,6 +111,16 @@
     line-height: 1.9;
   }
 
+  /* Audio Notes */
+  .audio-note-section {
+    padding: 100px 0;
+    min-height: 80vh;
+  }
+
+  .audio-note-content { padding: 0 20px; }
+
+  .audio-card { padding: 20px; }
+
   /* One More Year */
   .one-more-year-content { padding: 0 20px; }
 
@@ -189,6 +199,24 @@
   .letter-body p {
     font-size: 0.95rem !important;
     line-height: 1.85;
+  }
+
+  /* Audio Notes */
+  .audio-note-content h2 {
+    font-size: 1.7rem !important;
+  }
+
+  .audio-note-copy {
+    font-size: 0.95rem !important;
+    line-height: 1.8;
+  }
+
+  .audio-card {
+    padding: 16px;
+  }
+
+  .audio-card-label {
+    font-size: 1.05rem;
   }
 
   /* Goodbye */
